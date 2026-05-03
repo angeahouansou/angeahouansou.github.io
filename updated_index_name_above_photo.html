@@ -121,10 +121,26 @@ nav{
   cursor:pointer;
   text-align:left;
 }
+.paper-title.paper-toggle{
+  position:relative;
+  width:100%;
+  padding-right:2rem;
+}
 .paper-title.paper-toggle:hover{
   color:var(--red);
 }
-.paper-card.open 
+.paper-title.paper-toggle::after{
+  content:"+";
+  position:absolute;
+  right:0;
+  top:0;
+  color:var(--red);
+  font-size:1.15rem;
+  font-weight:500;
+}
+.paper-card.open .paper-title.paper-toggle::after{
+  content:"−";
+}
 .paper-card .paper-abstract{
   display:none;
 }
