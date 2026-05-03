@@ -162,8 +162,18 @@ nav{
 .role-instructor{background:#fef3c7;color:#92400e;border:1px solid #fde68a;}
 
 /* CV */
+.cv-intro{font-size:0.95rem;color:#374151;margin-bottom:1rem;line-height:1.8;}
+.cv-intro a{color:var(--red);text-decoration:none;font-weight:500;}
+.cv-intro a:hover{text-decoration:underline;}
+.cv-summary{margin-top:2.2rem;}
 .cv-block{margin-bottom:2.5rem;}
-.cv-block-title{font-family:'EB Garamond',serif;font-size:1.05rem;color:var(--navy);border-bottom:1px solid var(--border);padding-bottom:0.4rem;margin-bottom:1rem;font-weight:500;}
+.cv-block-title{font-family:'EB Garamond',serif;font-size:1.25rem;color:var(--navy);border-bottom:1px solid var(--border);padding-bottom:0.4rem;margin-bottom:1rem;font-weight:500;}
+.cv-entry{margin-bottom:1rem;}
+.cv-entry-title{font-size:0.95rem;color:var(--navy);font-weight:500;}
+.cv-entry-detail{font-size:0.87rem;color:#374151;line-height:1.7;}
+.cv-entry-date{font-size:0.82rem;color:var(--muted);font-style:italic;}
+.cv-list{margin-left:1.2rem;}
+.cv-list li{font-size:0.88rem;color:#374151;line-height:1.7;margin-bottom:0.4rem;}
 .cv-row{display:flex;gap:1.5rem;margin-bottom:0.85rem;align-items:flex-start;}
 .cv-year{font-size:0.78rem;color:var(--muted);white-space:nowrap;min-width:80px;padding-top:0.15rem;}
 .cv-info strong{font-size:0.9rem;color:var(--navy);font-weight:500;display:block;}
@@ -226,7 +236,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.55);text-align:center;pad
   <div class="hero-content">
   <p class="hero-welcome"><strong>Welcome to my website!</strong></p>
     <p class="hero-bio">I am a third-year Ph.D. student in Economics at the University of Houston. My research interests lie at the intersection of development economics, health economics, and environmental economics.</p>
-    <p class="hero-bio">Before joining the doctoral program, I was a predoctoral fellow at the African School of Economics, where I completed an M.Sc. in Mathematics, Statistics, and Economics. I also hold an M.A. in Economics from the University of Houston and a B.S. in Planning and Project Management from the École Nationale d’Économie Appliquée et de Management.
+    <p class="hero-bio">Before joining the doctoral program, I was a predoctoral fellow at the African School of Economics, where I completed an M.Sc. in Mathematics, Statistics, and Economics. I also hold an M.A. in Economics from the University of Houston and a B.Sc. in Planning and Project Management from the École Nationale d’Économie Appliquée et de Management.
 </p>
     <p class="hero-bio">I expect to be on the job market in Fall 2027.</p>
     <p class="hero-contact">
@@ -295,8 +305,78 @@ footer{background:var(--navy);color:rgba(255,255,255,0.55);text-align:center;pad
 <div class="full-alt">
   <div id="cv" class="section-wrap">
     <div class="section-header"><span class="section-label">Curriculum Vitae</span><div class="section-line"></div></div>
-    <h2 class="section-title">Ange Missimahou Ahouansou</h2>
+
+    <p class="cv-intro">My full CV can be found <a href="CV_Ange_Ahouansou.pdf" target="_blank">here</a>.</p>
     <a href="CV_Ange_Ahouansou.pdf" class="cv-dl" download>↓ Download Full CV (PDF)</a>
+
+    <div class="cv-summary">
+      <div class="cv-block">
+        <div class="cv-block-title">Education</div>
+        <div class="cv-entry">
+          <div class="cv-entry-title">University of Houston, USA</div>
+          <div class="cv-entry-detail">Ph.D. in Economics, 2023–Ongoing</div>
+          <div class="cv-entry-detail">M.A. in Economics, 2023–2025</div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-entry-title">African School of Economics, Benin</div>
+          <div class="cv-entry-detail">M.Sc. in Mathematics, Economics, and Statistics, 2020–2022</div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-entry-title">ENEAM, University of Abomey-Calavi, Benin</div>
+          <div class="cv-entry-detail">B.Sc. in Planning and Project Management, First Class Honours, 2017–2020</div>
+        </div>
+      </div>
+
+      <div class="cv-block">
+        <div class="cv-block-title">Fields of Interest</div>
+        <p class="cv-entry-detail">Development Economics, Health Economics, Labor Economics, Political Economy</p>
+      </div>
+
+      <div class="cv-block">
+        <div class="cv-block-title">Work Experience</div>
+        <ul class="cv-list">
+          <li>Summer Health Research Program (SHERP), Humana Integrated Health System Sciences Institute, University of Houston, Upcoming</li>
+          <li>Mapping Administrative Data Ecosystems in Sierra Leone, supported by the International Growth Centre, Feb 2026–Ongoing</li>
+          <li>Consultant, International Growth Centre, Sierra Leone, July 2025–Aug 2025</li>
+          <li>Research Assistant for Professor Md Shahadath Hossain, University of Houston, Fall 2024</li>
+          <li>Predoctoral Fellow and Research Assistant, African School of Economics, Aug 2022–July 2023</li>
+          <li>Work-Study Program, African School of Economics, July 2020–July 2022</li>
+        </ul>
+      </div>
+
+      <div class="cv-block">
+        <div class="cv-block-title">Awards, Fellowships, and Scholarships</div>
+        <ul class="cv-list">
+          <li>Economics Graduate Student Award, University of Houston, 2023–2024</li>
+          <li>Predoctoral Fellowship, African School of Economics, 2022–2023</li>
+          <li>Graduate Student Award, African School of Economics, 2020–2022</li>
+          <li>World Bank Scholarship, 2020–2022</li>
+        </ul>
+      </div>
+
+      <div class="cv-block">
+        <div class="cv-block-title">Teaching</div>
+        <ul class="cv-list">
+          <li>Applied Econometrics (PhD level), University of Houston, Spring 2026</li>
+          <li>Intermediate Microeconomics, University of Houston, Fall 2025</li>
+          <li>Principles of Microeconomics, University of Houston, Fall 2024 &amp; Spring 2025</li>
+          <li>Principles of Macroeconomics, University of Houston, Spring 2024</li>
+          <li>Social Economics, University of Houston, Fall 2023</li>
+          <li>Thematic Reading Group (Macroeconomics), Co-instructor, African School of Economics, Summer 2022</li>
+        </ul>
+      </div>
+
+      <div class="cv-block">
+        <div class="cv-block-title">Professional Membership</div>
+        <p class="cv-entry-detail">American Society of Health Economists (ASHEcon)</p>
+      </div>
+
+      <div class="cv-block">
+        <div class="cv-block-title">Skills and Languages</div>
+        <p class="cv-entry-detail"><strong>Computer programs:</strong> Stata, R and R Markdown, Matlab, QGIS, LaTeX, Microsoft Office Suite</p>
+        <p class="cv-entry-detail"><strong>Languages:</strong> English (fluent), French (native), Goun (mother tongue), and Fon (local language)</p>
+      </div>
+    </div>
   </div>
 </div>
 
