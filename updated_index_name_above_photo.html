@@ -106,6 +106,44 @@ nav{
 .paper-title{font-family:'EB Garamond',serif;font-size:1.15rem;color:var(--navy);font-weight:500;margin-bottom:0.4rem;}
 .paper-authors{font-size:0.85rem;color:var(--muted);font-style:italic;}
 
+.paper-title.paper-toggle{
+  display:block;
+  width:100%;
+  background:none;
+  border:none;
+  padding:0 2rem 0 0;
+  position:relative;
+  font-family:'EB Garamond',serif;
+  font-size:1.15rem;
+  color:var(--navy);
+  font-weight:500;
+  margin-bottom:0.4rem;
+  cursor:pointer;
+  text-align:left;
+}
+.paper-title.paper-toggle:hover{
+  color:var(--red);
+}
+.paper-title.paper-toggle::after{
+  content:"⌄";
+  position:absolute;
+  right:0;
+  top:0;
+  color:var(--red);
+  font-size:1.25rem;
+  line-height:1;
+}
+.paper-card.open .paper-title.paper-toggle::after{
+  content:"⌃";
+}
+.paper-card .paper-abstract{
+  display:none;
+}
+.paper-card.open .paper-abstract{
+  display:block;
+}
+
+
 /* TEACHING TABLE */
 .paper-abstract{font-size:0.88rem;color:#4b5563;line-height:1.7;margin-top:0.6rem;font-style:italic;}
 .teach-group{margin-bottom:2.5rem;}
@@ -198,15 +236,19 @@ footer{background:var(--navy);color:rgba(255,255,255,0.55);text-align:center;pad
   <div id="research" class="section-wrap">
     <div class="section-header"><span class="section-label">Research</span><div class="section-line"></div></div>
     <h2 class="section-title">Working Papers</h2>
+
     <div class="paper-card">
-      
-      <div class="paper-title">The Impact of a Natural Disaster on the Incidence of Fetal Losses and Pregnancy Outcomes</div>
+      <button class="paper-title paper-toggle" type="button" aria-expanded="false">
+        The Impact of a Natural Disaster on the Incidence of Fetal Losses and Pregnancy Outcomes
+      </button>
       <p class="paper-authors">with Elaine Liu, Jin-Tan Liu and Tzu-yin Hazel Tseng</p>
       <p class="paper-abstract">We examine the impact of a magnitude 7.3 earthquake on fetal losses and birth outcomes in Taiwan. We compare the pregnancy outcomes and cohort sizes of those who resided in areas with high earthquake intensity to those who resided in areas with low earthquake intensity, before and after the earthquake. Our analysis suggests that a negative shock during the first trimester increases fetal losses by 4.4 percent and almost all the losses are due to the loss of male fetuses, whereas a later negative shock leads to worse pregnancy outcomes. We also find evidence of positive selection of the surviving fetuses.</p>
     </div>
+
     <div class="paper-card">
-      
-      <div class="paper-title">Leaded Petrol Phase-Out and Early-Life Mortality: Evidence from Benin</div>
+      <button class="paper-title paper-toggle" type="button" aria-expanded="false">
+        Leaded Petrol Phase-Out and Early-Life Mortality: Evidence from Benin
+      </button>
       <p class="paper-abstract">This paper estimates the impact of Benin’s 2005 phase-out of leaded petrol on early-life mortality. I combine multiple rounds of the Demographic and Health Surveys (DHS) with geocoded DHS cluster data and road-network data, using proximity to major roads as a proxy for lead exposure. Using a difference-in-differences design, I find that the phase-out reduced infant mortality by about 0.97 percentage points for births in clusters located within 0.5 km of a major road, relative to births in more distant clusters. These estimates are robust to alternative exposure measures based on road length within buffer zones. In addition, the results suggest that children are more vulnerable to lead exposure during the first two years of life, and that poorer households experienced larger post-phase-out improvements in infant mortality. Overall, the findings point to substantial mortality benefits from removing a major source of lead exposure and highlight the health gains from environmental regulation in a low-income setting.</p>
     </div>
   </div>
@@ -260,6 +302,17 @@ footer{background:var(--navy);color:rgba(255,255,255,0.55);text-align:center;pad
   </div>
   <p>Ange Ahouansou &middot; PhD Candidate in Economics &middot; University of Houston</p>
 </footer>
+
+
+<script>
+document.querySelectorAll('.paper-toggle').forEach(function(button){
+  button.addEventListener('click', function(){
+    const card = button.closest('.paper-card');
+    const isOpen = card.classList.toggle('open');
+    button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+});
+</script>
 
 </body>
 </html>
