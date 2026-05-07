@@ -99,8 +99,30 @@ nav{
 .section-title{font-family:'EB Garamond',serif;font-size:1.9rem;font-weight:400;color:var(--navy);margin-bottom:1.5rem;}
 
 /* PAPER CARDS */
-.paper-card{border:1px solid var(--border);border-left:3px solid var(--red);padding:1.5rem 1.75rem;margin-bottom:1rem;background:var(--cream);border-radius:2px;transition:box-shadow 0.2s;}
+.paper-card{
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:1.5rem;
+  align-items:start;
+  border:1px solid var(--border);
+  border-left:3px solid var(--red);
+  padding:1.5rem 1.75rem;
+  margin-bottom:1rem;
+  background:var(--cream);
+  border-radius:2px;
+  transition:box-shadow 0.2s;
+}
 .paper-card:hover{box-shadow:0 2px 16px rgba(200,16,46,0.07);}
+.paper-image{
+  width:150px;
+  height:110px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:3px;
+  border:1px solid var(--border);
+  background:var(--white);
+}
+.paper-content{width:100%;}
 .paper-badge{display:inline-block;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;padding:2px 10px;border-radius:2px;margin-bottom:0.6rem;}
 .badge-wip{background:#dbeafe;color:#1e40af;}
 .paper-title{font-family:'EB Garamond',serif;font-size:1.15rem;color:var(--navy);font-weight:500;margin-bottom:0.4rem;}
@@ -207,6 +229,13 @@ footer{background:var(--navy);color:rgba(255,255,255,0.55);text-align:center;pad
   }
   .nav-links{display:none;}
   .skills-grid{grid-template-columns:1fr 1fr;}
+  .paper-card{
+    grid-template-columns:1fr;
+  }
+  .paper-image{
+    width:100%;
+    height:190px;
+  }
 }
 </style>
 </head>
@@ -255,20 +284,26 @@ footer{background:var(--navy);color:rgba(255,255,255,0.55);text-align:center;pad
     <h2 class="section-title">Working Papers</h2>
 
     <div class="paper-card">
-      <button class="paper-title paper-toggle" type="button" aria-expanded="false">
-        The Impact of a Natural Disaster on the Incidence of Fetal Losses and Pregnancy Outcomes
-      </button>
-      <p class="paper-authors">with Elaine M. Liu, Jin-Tan Liu and Tzu-yin Hazel Tseng</p>
-      <p class="paper-abstract">We examine the impact of a magnitude 7.3 earthquake on fetal losses and birth outcomes in Taiwan. We compare the pregnancy outcomes and cohort sizes of those who resided in areas with high earthquake intensity to those who resided in areas with low earthquake intensity, before and after the earthquake. Our analysis suggests that a negative shock during the first trimester increases fetal losses by 4.4 percent and almost all the losses are due to the loss of male fetuses, whereas a later negative shock leads to worse pregnancy outcomes. We also find evidence of positive selection of the surviving fetuses.</p>
-   <p class="paper-abstract">(Accepted for presentation at ASHEcon, June 2026)</p>
+      <img src="images/taiwan-earthquake-intensity.jpg" alt="Map of Taiwan earthquake intensity" class="paper-image">
+      <div class="paper-content">
+        <button class="paper-title paper-toggle" type="button" aria-expanded="false">
+          The Impact of a Natural Disaster on the Incidence of Fetal Losses and Pregnancy Outcomes
+        </button>
+        <p class="paper-authors">with Elaine M. Liu, Jin-Tan Liu and Tzu-yin Hazel Tseng</p>
+        <p class="paper-abstract">We examine the impact of a magnitude 7.3 earthquake on fetal losses and birth outcomes in Taiwan. We compare the pregnancy outcomes and cohort sizes of those who resided in areas with high earthquake intensity to those who resided in areas with low earthquake intensity, before and after the earthquake. Our analysis suggests that a negative shock during the first trimester increases fetal losses by 4.4 percent and almost all the losses are due to the loss of male fetuses, whereas a later negative shock leads to worse pregnancy outcomes. We also find evidence of positive selection of the surviving fetuses.</p>
+        <p class="paper-abstract">(Accepted for presentation at ASHEcon, June 2026)</p>
+      </div>
     </div>
 
     <div class="paper-card">
-      <button class="paper-title paper-toggle" type="button" aria-expanded="false">
-        Leaded Petrol Phase-Out and Early-Life Mortality: Evidence from Benin
-      </button>
-      <p class="paper-abstract">This paper estimates the impact of Benin’s 2005 phase-out of leaded petrol on early-life mortality. I combine multiple rounds of the Demographic and Health Surveys (DHS) with geocoded DHS cluster data and road-network data, using proximity to major roads as a proxy for lead exposure. Using a difference-in-differences design, I find that the phase-out reduced infant mortality by about 0.97 percentage points for births in clusters located within 0.5 km of a major road, relative to births in more distant clusters. These estimates are robust to alternative exposure measures based on road length within buffer zones. In addition, the results suggest that children are more vulnerable to lead exposure during the first two years of life, and that poorer households experienced larger post-phase-out improvements in infant mortality. Overall, the findings point to substantial mortality benefits from removing a major source of lead exposure and highlight the health gains from environmental regulation in a low-income setting.</p>
-    <p class="paper-abstract">(Presented at the Texas Applied Microeconomics Student (TEAMS) Workshop, April 2026)</p>
+      <img src="images/benin-major-roads.png" alt="Map of major road classes in Benin" class="paper-image">
+      <div class="paper-content">
+        <button class="paper-title paper-toggle" type="button" aria-expanded="false">
+          Leaded Petrol Phase-Out and Early-Life Mortality: Evidence from Benin
+        </button>
+        <p class="paper-abstract">This paper estimates the impact of Benin’s 2005 phase-out of leaded petrol on early-life mortality. I combine multiple rounds of the Demographic and Health Surveys (DHS) with geocoded DHS cluster data and road-network data, using proximity to major roads as a proxy for lead exposure. Using a difference-in-differences design, I find that the phase-out reduced infant mortality by about 0.97 percentage points for births in clusters located within 0.5 km of a major road, relative to births in more distant clusters. These estimates are robust to alternative exposure measures based on road length within buffer zones. In addition, the results suggest that children are more vulnerable to lead exposure during the first two years of life, and that poorer households experienced larger post-phase-out improvements in infant mortality. Overall, the findings point to substantial mortality benefits from removing a major source of lead exposure and highlight the health gains from environmental regulation in a low-income setting.</p>
+        <p class="paper-abstract">(Presented at the Texas Applied Microeconomics Student (TEAMS) Workshop, April 2026)</p>
+      </div>
     </div>
   </div>
 </div>
@@ -387,3 +422,4 @@ document.querySelectorAll('.paper-toggle').forEach(function(button){
 
 </body>
 </html>
+
