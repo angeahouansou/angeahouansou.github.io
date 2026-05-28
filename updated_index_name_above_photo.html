@@ -18,7 +18,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);
 nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
   background:rgba(251,253,255,0.97);backdrop-filter:blur(8px);
-  border-bottom:2px solid var(--red);
+  border-bottom:1px solid var(--border);
   padding:0 3rem;display:flex;align-items:center;justify-content:space-between;height:64px;
 }
 .nav-brand{display:flex;align-items:center;gap:0.75rem;}
@@ -132,8 +132,9 @@ nav{
   color:var(--navy);
   text-align:left;
   margin:0 0 1.5rem 0;
-  padding-bottom:0.45rem;
-  border-bottom:1px solid var(--border);
+  padding-bottom:0.35rem;
+  display:inline-block;
+  border-bottom:2px solid var(--red);
 }
 
 .research-wrap,.cv-wrap,.teaching-wrap{
@@ -197,7 +198,7 @@ nav{
 /* TEACHING TABLE */
 .paper-abstract{font-size:0.88rem;color:#4b5563;line-height:1.7;margin-top:0.6rem;font-style:italic;}
 .teach-group{margin-bottom:2.5rem;}
-.teach-institution{font-family:'EB Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--navy);margin-bottom:0.75rem;padding-bottom:0.4rem;border-bottom:2px solid var(--red);}
+.teach-institution{font-family:'EB Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--navy);margin-bottom:0.75rem;padding-bottom:0.4rem;}
 .teaching-table th{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);font-weight:400;text-align:left;padding:0 1rem 0.75rem 0;border-bottom:1px solid var(--border);}
 .teaching-table td{padding:0.9rem 1rem 0.9rem 0;font-size:0.9rem;vertical-align:top;border-bottom:1px solid var(--border);color:var(--text);}
 .teaching-table tr:last-child td{border-bottom:none;}
