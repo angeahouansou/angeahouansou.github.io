@@ -137,6 +137,25 @@ nav{
   border-bottom:2px solid var(--red);
 }
 
+ .teaching-evals {
+  margin-top: 24px;
+}
+
+.teaching-evals-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.teaching-evals-text {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.teaching-evals-table {
+  margin-top: 8px;
+} 
+
 .research-wrap,.cv-wrap,.teaching-wrap{
   padding-top:5.6rem;
 }
@@ -340,11 +359,16 @@ footer{background:var(--navy);color:rgba(255,255,255,0.55);text-align:center;pad
   <div class="page-heading">
     <h1 class="page-title">Teaching</h1>
   </div>
+
   <h2 class="teaching-section-title">Teaching Assistant</h2>
+
   <div class="teach-group">
     <div class="teach-institution">University of Houston</div>
+
     <table class="teaching-table">
-      <thead><tr><th>Course</th><th>Term</th></tr></thead>
+      <thead>
+        <tr><th>Course</th><th>Term</th></tr>
+      </thead>
       <tbody>
         <tr><td><div class="course-name-cell">Data Management</div></td><td>Summer 2026</td></tr>
         <tr><td><div class="course-name-cell">Applied Econometrics (PhD level)</div></td><td>Spring 2026</td></tr>
@@ -354,11 +378,47 @@ footer{background:var(--navy);color:rgba(255,255,255,0.55);text-align:center;pad
         <tr><td><div class="course-name-cell">Social Economics</div></td><td>Fall 2023</td></tr>
       </tbody>
     </table>
+
+    <div class="teaching-evals">
+      <div class="teaching-evals-title">Student Evaluation Highlights</div>
+      <p class="teaching-evals-text">
+        In Fall 2025, student evaluations for Intermediate Microeconomics rated my teaching assistance above both department and college averages on TA-related questions.
+      </p>
+
+      <table class="teaching-table teaching-evals-table">
+        <thead>
+          <tr>
+            <th>Evaluation item</th>
+            <th>My score</th>
+            <th>Dept. avg.</th>
+            <th>College avg.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="course-name-cell">Receptive to questions</div></td>
+            <td>4.83 / 5</td>
+            <td>4.24</td>
+            <td>4.36</td>
+          </tr>
+          <tr>
+            <td><div class="course-name-cell">Available for assistance</div></td>
+            <td>4.67 / 5</td>
+            <td>4.23</td>
+            <td>4.34</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
+
   <div class="teach-group">
     <div class="teach-institution">African School of Economics</div>
+
     <table class="teaching-table">
-      <thead><tr><th>Course</th><th>Term</th></tr></thead>
+      <thead>
+        <tr><th>Course</th><th>Term</th></tr>
+      </thead>
       <tbody>
         <tr><td><div class="course-name-cell">Thematic Reading Group (Macroeconomics) — Co-Instructor</div></td><td>Summer 2022</td></tr>
         <tr><td><div class="course-name-cell">Macroeconomic Theory II</div></td><td>Spring &amp; Summer 2022</td></tr>
