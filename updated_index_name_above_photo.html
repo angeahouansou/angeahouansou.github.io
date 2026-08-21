@@ -216,12 +216,43 @@ nav{
 
 /* TEACHING TABLE */
 .paper-abstract{font-size:0.88rem;color:#4b5563;line-height:1.7;margin-top:0.6rem;font-style:italic;}
-.teach-group{margin-bottom:2.5rem;}
+.teach-group{margin-bottom:2.8rem;}
 .teach-institution{font-family:'EB Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--navy);margin-bottom:0.75rem;padding-bottom:0.4rem;}
-.teaching-role-title{font-size:1rem;font-weight:600;color:#607d8b;margin:1.15rem 0 0.55rem;}
-.teaching-course-list{margin:0 0 1.35rem 1.2rem;padding:0;list-style-type:square;}
-.teaching-course-list li{font-size:0.9rem;color:var(--text);line-height:1.8;margin-bottom:0.15rem;padding-left:0.15rem;}
-.teaching-course-list strong{font-weight:600;}
+.teach-school{
+  font-family:'EB Garamond',serif;
+  font-size:1.35rem;
+  font-weight:500;
+  color:var(--navy);
+  margin-bottom:1.15rem;
+  padding-bottom:0.28rem;
+  display:inline-block;
+  border-bottom:2px solid var(--red);
+}
+.teaching-role-title{
+  font-family:'DM Sans',sans-serif;
+  font-size:0.76rem;
+  font-weight:500;
+  letter-spacing:0.11em;
+  text-transform:uppercase;
+  color:var(--red);
+  margin:1.15rem 0 0.55rem;
+}
+.teaching-course-list{
+  margin:0 0 1.35rem 1.05rem;
+  padding:0;
+  list-style-type:square;
+}
+.teaching-course-list li{
+  font-family:'DM Sans',sans-serif;
+  font-size:0.9rem;
+  color:var(--text);
+  line-height:1.75;
+  margin-bottom:0.18rem;
+  padding-left:0.12rem;
+}
+.teaching-course-list li::marker{color:var(--red);font-size:0.78em;}
+.teaching-course-name{font-weight:500;color:var(--navy);}
+.teaching-course-term{font-weight:400;color:#4b5563;}
 .teaching-table th{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);font-weight:400;text-align:left;padding:0 1rem 0.75rem 0;border-bottom:1px solid var(--border);}
 .teaching-table td{padding:0.9rem 1rem 0.9rem 0;font-size:0.9rem;vertical-align:top;border-bottom:1px solid var(--border);color:var(--text);}
 .teaching-table tr:last-child td{border-bottom:none;}
@@ -365,36 +396,36 @@ footer{background:var(--navy);color:rgba(255,255,255,0.55);text-align:center;pad
   </div>
 
   <div class="teach-group">
-    <div class="teach-institution">University of Houston</div>
+    <div class="teach-school">University of Houston</div>
 
     <div class="teaching-role-title">Instructor of Record</div>
     <ul class="teaching-course-list">
-      <li><strong>Intermediate Microeconomics</strong> (Fall 2026)</li>
+      <li><span class="teaching-course-name">Intermediate Microeconomics</span> <span class="teaching-course-term">(Fall 2026)</span></li>
     </ul>
 
     <div class="teaching-role-title">Teaching Assistant</div>
     <ul class="teaching-course-list">
-      <li><strong>Data Management</strong> (Summer 2026)</li>
-      <li><strong>Applied Econometrics</strong> (PhD level, Spring 2026)</li>
-      <li><strong>Intermediate Microeconomics</strong> (Fall 2025)</li>
-      <li><strong>Principles of Microeconomics</strong> (Fall 2024 &amp; Spring 2025)</li>
-      <li><strong>Principles of Macroeconomics</strong> (Spring 2024)</li>
-      <li><strong>Social Economics</strong> (Fall 2023)</li>
+      <li><span class="teaching-course-name">Data Management</span> <span class="teaching-course-term">(Summer 2026)</span></li>
+      <li><span class="teaching-course-name">Applied Econometrics</span> <span class="teaching-course-term">(PhD level, Spring 2026)</span></li>
+      <li><span class="teaching-course-name">Intermediate Microeconomics</span> <span class="teaching-course-term">(Fall 2025)</span></li>
+      <li><span class="teaching-course-name">Principles of Microeconomics</span> <span class="teaching-course-term">(Fall 2024 &amp; Spring 2025)</span></li>
+      <li><span class="teaching-course-name">Principles of Macroeconomics</span> <span class="teaching-course-term">(Spring 2024)</span></li>
+      <li><span class="teaching-course-name">Social Economics</span> <span class="teaching-course-term">(Fall 2023)</span></li>
     </ul>
   </div>
 
   <div class="teach-group">
-    <div class="teach-institution">African School of Economics</div>
+    <div class="teach-school">African School of Economics</div>
 
     <div class="teaching-role-title">Co-Instructor</div>
     <ul class="teaching-course-list">
-      <li><strong>Thematic Reading Group (Macroeconomics)</strong> (Summer 2022)</li>
+      <li><span class="teaching-course-name">Thematic Reading Group (Macroeconomics)</span> <span class="teaching-course-term">(Summer 2022)</span></li>
     </ul>
 
     <div class="teaching-role-title">Teaching Assistant</div>
     <ul class="teaching-course-list">
-      <li><strong>Macroeconomic Theory II</strong> (Spring &amp; Summer 2022)</li>
-      <li><strong>Macroeconomic Theory I</strong> (Fall 2021)</li>
+      <li><span class="teaching-course-name">Macroeconomic Theory II</span> <span class="teaching-course-term">(Spring &amp; Summer 2022)</span></li>
+      <li><span class="teaching-course-name">Macroeconomic Theory I</span> <span class="teaching-course-term">(Fall 2021)</span></li>
     </ul>
   </div>
 
