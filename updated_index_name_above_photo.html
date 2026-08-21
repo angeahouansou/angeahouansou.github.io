@@ -218,6 +218,10 @@ nav{
 .paper-abstract{font-size:0.88rem;color:#4b5563;line-height:1.7;margin-top:0.6rem;font-style:italic;}
 .teach-group{margin-bottom:2.5rem;}
 .teach-institution{font-family:'EB Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--navy);margin-bottom:0.75rem;padding-bottom:0.4rem;}
+.teaching-role-title{font-size:1rem;font-weight:600;color:#607d8b;margin:1.15rem 0 0.55rem;}
+.teaching-course-list{margin:0 0 1.35rem 1.2rem;padding:0;list-style-type:square;}
+.teaching-course-list li{font-size:0.9rem;color:var(--text);line-height:1.8;margin-bottom:0.15rem;padding-left:0.15rem;}
+.teaching-course-list strong{font-weight:600;}
 .teaching-table th{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);font-weight:400;text-align:left;padding:0 1rem 0.75rem 0;border-bottom:1px solid var(--border);}
 .teaching-table td{padding:0.9rem 1rem 0.9rem 0;font-size:0.9rem;vertical-align:top;border-bottom:1px solid var(--border);color:var(--text);}
 .teaching-table tr:last-child td{border-bottom:none;}
@@ -360,39 +364,38 @@ footer{background:var(--navy);color:rgba(255,255,255,0.55);text-align:center;pad
     <h1 class="page-title">Teaching</h1>
   </div>
 
-  <h2 class="teaching-section-title">Teaching Assistant</h2>
-
   <div class="teach-group">
     <div class="teach-institution">University of Houston</div>
 
-    <table class="teaching-table">
-      <thead>
-        <tr><th>Course</th><th>Term</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><div class="course-name-cell">Data Management</div></td><td>Summer 2026</td></tr>
-        <tr><td><div class="course-name-cell">Applied Econometrics (PhD level)</div></td><td>Spring 2026</td></tr>
-        <tr><td><div class="course-name-cell">Intermediate Microeconomics</div></td><td>Fall 2025</td></tr>
-        <tr><td><div class="course-name-cell">Principles of Microeconomics</div></td><td>Fall 2024 &amp; Spring 2025</td></tr>
-        <tr><td><div class="course-name-cell">Principles of Macroeconomics</div></td><td>Spring 2024</td></tr>
-        <tr><td><div class="course-name-cell">Social Economics</div></td><td>Fall 2023</td></tr>
-      </tbody>
-    </table>
+    <div class="teaching-role-title">Instructor of Record</div>
+    <ul class="teaching-course-list">
+      <li><strong>Intermediate Microeconomics</strong> (Fall 2026)</li>
+    </ul>
+
+    <div class="teaching-role-title">Teaching Assistant</div>
+    <ul class="teaching-course-list">
+      <li><strong>Data Management</strong> (Summer 2026)</li>
+      <li><strong>Applied Econometrics</strong> (PhD level, Spring 2026)</li>
+      <li><strong>Intermediate Microeconomics</strong> (Fall 2025)</li>
+      <li><strong>Principles of Microeconomics</strong> (Fall 2024 &amp; Spring 2025)</li>
+      <li><strong>Principles of Macroeconomics</strong> (Spring 2024)</li>
+      <li><strong>Social Economics</strong> (Fall 2023)</li>
+    </ul>
   </div>
 
   <div class="teach-group">
     <div class="teach-institution">African School of Economics</div>
 
-    <table class="teaching-table">
-      <thead>
-        <tr><th>Course</th><th>Term</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><div class="course-name-cell">Thematic Reading Group (Macroeconomics) — Co-Instructor</div></td><td>Summer 2022</td></tr>
-        <tr><td><div class="course-name-cell">Macroeconomic Theory II</div></td><td>Spring &amp; Summer 2022</td></tr>
-        <tr><td><div class="course-name-cell">Macroeconomic Theory I</div></td><td>Fall 2021</td></tr>
-      </tbody>
-    </table>
+    <div class="teaching-role-title">Co-Instructor</div>
+    <ul class="teaching-course-list">
+      <li><strong>Thematic Reading Group (Macroeconomics)</strong> (Summer 2022)</li>
+    </ul>
+
+    <div class="teaching-role-title">Teaching Assistant</div>
+    <ul class="teaching-course-list">
+      <li><strong>Macroeconomic Theory II</strong> (Spring &amp; Summer 2022)</li>
+      <li><strong>Macroeconomic Theory I</strong> (Fall 2021)</li>
+    </ul>
   </div>
 
   <div class="teaching-evals">
@@ -430,6 +433,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.55);text-align:center;pad
 
 
     
+
 <!-- CV -->
 <div class="full-alt page" data-page="cv">
   <div id="cv" class="section-wrap cv-wrap">
