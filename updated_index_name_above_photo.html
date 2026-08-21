@@ -54,7 +54,8 @@ nav{
 .hero-content{
   text-align:left;
   justify-self:start;
-  width:100%;
+  width:calc(100% + 140px);
+  max-width:650px;
 }
 .hero-welcome{
   font-size:1.25rem;
@@ -300,10 +301,6 @@ body.page-mode .hero.page.active{
   color:var(--red);
 }
 
-footer{background:var(--navy);color:rgba(255,255,255,0.55);text-align:center;padding:1.35rem 1rem;font-size:0.78rem;}
-.footer-links{display:flex;justify-content:center;gap:1.5rem;margin-bottom:0.35rem;flex-wrap:wrap;}
-.footer-links a{color:#e5a0a9;text-decoration:none;}
-.footer-links a:hover{color:white;}
 
 @media(max-width:768px){
   .hero{
@@ -315,6 +312,8 @@ footer{background:var(--navy);color:rgba(255,255,255,0.55);text-align:center;pad
   }
   .hero-content{
     text-align:center;
+    width:100%;
+    max-width:none;
   }
   .hero-actions,
   .fields{
@@ -356,6 +355,8 @@ footer{background:var(--navy);color:rgba(255,255,255,0.55);text-align:center;pad
     <p class="hero-bio">I expect to be on the job market in Fall 2027.</p>
     <p class="hero-contact">
   You can contact me at: <a href="mailto:amahouan@cougarnet.uh.edu">amahouan@cougarnet.uh.edu</a>
+  &nbsp;&middot;&nbsp;
+  <a href="https://www.linkedin.com/in/ange-ahouansou-48182b238/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 </p>
     </div>
   </div>
@@ -441,13 +442,6 @@ footer{background:var(--navy);color:rgba(255,255,255,0.55);text-align:center;pad
   </div>
 </div>
 
-<footer>
-  <div class="footer-links">
-    <a href="mailto:amahouan@cougarnet.uh.edu">Email</a>
-    <a href="https://www.linkedin.com/in/ange-ahouansou-48182b238/">LinkedIn</a>
-  </div>
-  <p>Ange Ahouansou &middot; PhD Candidate in Economics &middot; University of Houston</p>
-</footer>
 
 
 <script>
