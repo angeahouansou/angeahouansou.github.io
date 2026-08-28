@@ -28,6 +28,17 @@ nav{
 .nav-links a{text-decoration:none;font-size:0.86rem;color:var(--muted);letter-spacing:0.055em;text-transform:uppercase;transition:color 0.2s;}
 .nav-links a:hover{color:var(--red);}
 
+.nav-toggle{
+  display:none;
+  background:none;
+  border:none;
+  color:var(--navy);
+  cursor:pointer;
+  padding:0.35rem;
+  line-height:1;
+}
+.nav-toggle svg{display:block;width:28px;height:28px;}
+
 /* HERO */
 .hero{
   min-height:100vh;
@@ -303,6 +314,66 @@ body.page-mode .hero.page.active{
 
 
 @media(max-width:768px){
+  nav{
+    padding:0 1rem;
+    height:64px;
+  }
+
+  .nav-brand{
+    gap:0.55rem;
+    min-width:0;
+  }
+
+  .nav-logo{
+    width:38px;
+    height:38px;
+    flex:0 0 auto;
+  }
+
+  .nav-name{
+    font-size:1.18rem;
+    white-space:nowrap;
+  }
+
+  .nav-toggle{
+    display:block;
+    flex:0 0 auto;
+  }
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:64px;
+    left:0;
+    right:0;
+    background:rgba(251,253,255,0.99);
+    border-bottom:1px solid var(--border);
+    box-shadow:0 8px 20px rgba(26,38,64,0.08);
+    padding:0.75rem 1rem 1rem;
+    gap:0;
+    flex-direction:column;
+  }
+
+  .nav-links.open{
+    display:flex;
+  }
+
+  .nav-links li{
+    width:100%;
+  }
+
+  .nav-links a{
+    display:block;
+    width:100%;
+    padding:0.9rem 0.35rem;
+    font-size:0.88rem;
+    border-bottom:1px solid var(--border);
+  }
+
+  .nav-links li:last-child a{
+    border-bottom:none;
+  }
+
   .hero{
     padding-top:5.5rem;
   }
@@ -319,8 +390,14 @@ body.page-mode .hero.page.active{
   .fields{
     justify-content:center;
   }
-  .nav-links{display:none;}
   .skills-grid{grid-template-columns:1fr 1fr;}
+}
+
+@media(max-width:420px){
+  .nav-name{font-size:1.05rem;}
+  .nav-logo{width:34px;height:34px;}
+  .hero-name{font-size:2.2rem;white-space:normal;}
+  .skills-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -328,10 +405,15 @@ body.page-mode .hero.page.active{
 
 <nav>
   <div class="nav-brand">
-    <img src="uh_red.png" class="nav-logo" alt="University of Houston">
+    <img src="https://www.uh.edu/brand/_img/uh_red.png" class="nav-logo" alt="University of Houston">
     <span class="nav-name">Ange Ahouansou</span>
   </div>
-  <ul class="nav-links">
+  <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </button>
+  <ul class="nav-links" id="primary-navigation">
     <li><a href="#home">Home</a></li>
     <li><a href="#research">Research</a></li>
     <li><a href="#teaching">Teaching</a></li>
@@ -457,7 +539,17 @@ document.querySelectorAll('.paper-toggle').forEach(function(button){
 /* Page-like navigation: each menu item shows one page instead of scrolling */
 const pages = document.querySelectorAll('.page');
 const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-links');
 const defaultPage = 'home';
+
+if(navToggle && navMenu){
+  navToggle.addEventListener('click', function(){
+    const isOpen = navMenu.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+  });
+}
 
 document.body.classList.add('page-mode');
 
@@ -492,6 +584,13 @@ navLinks.forEach(function(link){
     const pageId = link.getAttribute('href').substring(1);
     history.pushState(null, '', '#' + pageId);
     showPage(pageId);
+    if(navMenu){
+      navMenu.classList.remove('open');
+    }
+    if(navToggle){
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open navigation menu');
+    }
   });
 });
 
