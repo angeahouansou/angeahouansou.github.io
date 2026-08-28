@@ -299,13 +299,13 @@ nav{
 
 
 /* PAGE-LIKE NAVIGATION */
-body.page-mode .page{
+.page{
   display:none !important;
 }
-body.page-mode .page.active{
+.page.active{
   display:block !important;
 }
-body.page-mode .hero.page.active{
+.hero.page.active{
   display:flex !important;
 }
 .nav-links a.active{
@@ -314,38 +314,15 @@ body.page-mode .hero.page.active{
 
 
 @media(max-width:768px){
-  nav{
-    padding:0 1rem;
-    height:64px;
-  }
-
-  .nav-brand{
-    gap:0.55rem;
-    min-width:0;
-  }
-
-  .nav-logo{
-    width:38px;
-    height:38px;
-    flex:0 0 auto;
-  }
-
-  .nav-name{
-    font-size:1.18rem;
-    white-space:nowrap;
-  }
-
-  .nav-toggle{
-    display:block;
-    flex:0 0 auto;
-  }
-
+  nav{padding:0 1rem;height:64px;}
+  .nav-brand{gap:0.55rem;min-width:0;}
+  .nav-logo{width:38px;height:38px;flex:0 0 auto;}
+  .nav-name{font-size:1.18rem;white-space:nowrap;}
+  .nav-toggle{display:block;flex:0 0 auto;}
   .nav-links{
     display:none;
     position:absolute;
-    top:64px;
-    left:0;
-    right:0;
+    top:64px;left:0;right:0;
     background:rgba(251,253,255,0.99);
     border-bottom:1px solid var(--border);
     box-shadow:0 8px 20px rgba(26,38,64,0.08);
@@ -353,43 +330,14 @@ body.page-mode .hero.page.active{
     gap:0;
     flex-direction:column;
   }
-
-  .nav-links.open{
-    display:flex;
-  }
-
-  .nav-links li{
-    width:100%;
-  }
-
-  .nav-links a{
-    display:block;
-    width:100%;
-    padding:0.9rem 0.35rem;
-    font-size:0.88rem;
-    border-bottom:1px solid var(--border);
-  }
-
-  .nav-links li:last-child a{
-    border-bottom:none;
-  }
-
-  .hero{
-    padding-top:5.5rem;
-  }
-  .hero-main{
-    grid-template-columns:1fr;
-    gap:2rem;
-  }
-  .hero-content{
-    text-align:center;
-    width:100%;
-    max-width:none;
-  }
-  .hero-actions,
-  .fields{
-    justify-content:center;
-  }
+  .nav-links.open{display:flex;}
+  .nav-links li{width:100%;}
+  .nav-links a{display:block;width:100%;padding:0.9rem 0.35rem;font-size:0.88rem;border-bottom:1px solid var(--border);}
+  .nav-links li:last-child a{border-bottom:none;}
+  .hero{padding-top:5.5rem;}
+  .hero-main{grid-template-columns:1fr;gap:2rem;}
+  .hero-content{text-align:center;width:100%;max-width:none;}
+  .hero-actions,.fields{justify-content:center;}
   .skills-grid{grid-template-columns:1fr 1fr;}
 }
 
@@ -405,7 +353,7 @@ body.page-mode .hero.page.active{
 
 <nav>
   <div class="nav-brand">
-    <img src="https://www.uh.edu/brand/_img/uh_red.png" class="nav-logo" alt="University of Houston">
+    <img src="https://www.uh.edu/brand/_img/uh-interlock-logo.png" class="nav-logo" alt="University of Houston">
     <span class="nav-name">Ange Ahouansou</span>
   </div>
   <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
@@ -547,11 +495,8 @@ if(navToggle && navMenu){
   navToggle.addEventListener('click', function(){
     const isOpen = navMenu.classList.toggle('open');
     navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
   });
 }
-
-document.body.classList.add('page-mode');
 
 function showPage(pageId){
   const target = document.getElementById(pageId);
@@ -584,17 +529,13 @@ navLinks.forEach(function(link){
     const pageId = link.getAttribute('href').substring(1);
     history.pushState(null, '', '#' + pageId);
     showPage(pageId);
-    if(navMenu){
-      navMenu.classList.remove('open');
-    }
-    if(navToggle){
-      navToggle.setAttribute('aria-expanded', 'false');
-      navToggle.setAttribute('aria-label', 'Open navigation menu');
-    }
+    if(navMenu) navMenu.classList.remove('open');
+    if(navToggle) navToggle.setAttribute('aria-expanded', 'false');
   });
 });
 
 window.addEventListener('popstate', handleRoute);
+window.addEventListener('hashchange', handleRoute);
 handleRoute();
 </script>
 
