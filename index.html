@@ -56,6 +56,7 @@ nav{
   text-align:center;
 }
 .hero-name{font-family:'EB Garamond',serif;font-size:clamp(2.5rem,4vw,3.8rem);font-weight:400;line-height:1.08;color:var(--navy);margin-bottom:1rem;white-space:nowrap;}
+.hero-name::after{content:"";display:block;width:58px;height:2px;background:var(--red);margin:1rem auto 0;}
 .hero-affil{font-size:1.05rem;font-weight:500;color:var(--navy);letter-spacing:0.02em;line-height:1.5;}
 .hero-main{
   display:grid;
@@ -81,7 +82,7 @@ nav{
 /* SECTIONS */
 .full-alt{background:var(--white);}
 .section-wrap{max-width:1100px;margin:0 auto;padding:4.3rem 2rem;}
-.section-title{font-family:'EB Garamond',serif;font-size:1.9rem;font-weight:400;color:var(--navy);margin-bottom:1.5rem;}
+.section-title{font-family:'EB Garamond',serif;font-size:1.9rem;font-weight:400;color:var(--navy);margin-bottom:1.5rem;padding-bottom:0.28rem;display:inline-block;border-bottom:2px solid var(--red);}
 .page-heading{text-align:center;margin:0 auto 2.4rem;padding-top:1.2rem;}
 .page-title{
   font-family:'EB Garamond',serif;
@@ -139,8 +140,8 @@ nav{
 .teach-group{margin-bottom:2.8rem;}
 .teach-school{
   font-family:'EB Garamond',serif;
-  font-size:1.35rem;
-  font-weight:500;
+  font-size:1.9rem;
+  font-weight:400;
   color:var(--navy);
   margin-bottom:1.15rem;
   padding-bottom:0.28rem;
@@ -212,6 +213,7 @@ body.page-mode .hero.page.active{display:flex !important;}
   .hero{padding:5.4rem 1.25rem 3rem;min-height:100svh;} /* svh = visible height on iPhone Safari */
   .hero-welcome,.hero-bio,.hero-contact{line-height:1.65;}
   .contact-label{display:block;}
+  .section-title,.teach-school{font-size:1.5rem;} /* same size as each other, smaller on phones so long names fit */
   /* short pages (CV) keep their white background down to the bottom of the screen */
   body.page-mode .full-alt.page.active{min-height:100vh;min-height:100svh;}
   .research-wrap,.cv-wrap,.teaching-wrap{padding-top:5.4rem;}
@@ -231,6 +233,7 @@ body.page-mode .hero.page.active{display:flex !important;}
 
 @media(max-width:350px){
   .nav-links a{font-size:0.72rem;letter-spacing:0.02em;}
+  .section-title,.teach-school{font-size:1.3rem;}
 }
 </style>
 </head>
@@ -238,6 +241,7 @@ body.page-mode .hero.page.active{display:flex !important;}
 
 <nav>
   <div class="nav-brand">
+    <img src="uh-logo.png" class="nav-logo" width="40" height="40" alt="University of Houston">
     <span class="nav-name">Ange Ahouansou</span>
   </div>
   <ul class="nav-links">
@@ -258,7 +262,7 @@ body.page-mode .hero.page.active{display:flex !important;}
       <div class="accent-bar"></div>
     </div>
     <div class="hero-content">
-      <p class="hero-welcome"><strong>Welcome to my website!</strong></p>
+      <p class="hero-welcome"><strong>Hi, I'm Ange.</strong></p>
       <p class="hero-bio">I am a fourth-year Ph.D. student in Economics at the University of Houston, with research interests at the intersection of health economics, development economics, and labor economics. My research examines how public policies and early-life environmental conditions shape health, mortality, and human capital formation over the life course.</p>
       <p class="hero-bio">In Summer 2025, I served as a Consultant with the International Growth Centre (IGC) through its Ph.D. Summer Placement Program, working with the Sierra Leone country team.</p>
       <p class="hero-bio">Before joining the doctoral program, I was a predoctoral fellow at the African School of Economics. I also hold an M.A. in Economics from the University of Houston.</p>
