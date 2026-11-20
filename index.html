@@ -79,11 +79,11 @@ nav{
 .social-link:hover{opacity:1;text-decoration:none;}
 .social-icon{display:block;width:21px;height:21px;object-fit:contain;}
 
-/* RESEARCH INTERESTS STRIP (home) */
-.interests{width:100%;margin-top:3.2rem;padding:1.6rem 2rem 1.8rem;background:#f2f5f9;border-radius:3px;text-align:left;}
-.interests-title{font-family:'EB Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin-bottom:0.95rem;}
-.interest-list{display:flex;flex-wrap:wrap;gap:0.75rem;list-style:none;}
-.interest-list li{background:var(--white);border:1px solid #d9e0e8;border-radius:2px;padding:0.65rem 1.4rem;font-size:1rem;color:var(--text);}
+/* RESEARCH INTERESTS LINE (home) */
+.interests{width:100%;margin-top:2.6rem;padding:0.7rem 1.25rem;background:#f2f5f9;border-radius:3px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0.6rem 0.9rem;font-size:1rem;}
+.interests-title{font-size:1rem;font-weight:600;color:var(--navy);margin-right:0.35rem;}
+.interest-list{display:flex;flex-wrap:wrap;justify-content:center;gap:0.6rem;list-style:none;}
+.interest-list li{background:var(--white);border:1px solid #d9e0e8;border-radius:2px;padding:0.22rem 0.9rem;color:var(--text);}
 
 /* SECTIONS */
 .full-alt{background:var(--white);}
@@ -198,14 +198,14 @@ body.page-mode > .page.active{flex:1 0 auto;} /* the open page stretches so the 
 .footer-inner{max-width:1100px;margin:0 auto;padding:0.95rem 2rem;text-align:center;}
 
 /* CV SUMMARY */
-.cv-summary{margin-top:2.6rem;max-width:720px;}
+.cv-column{max-width:720px;margin:0 auto;} /* centred under the page title */
+.cv-summary{margin-top:2.6rem;}
 .cv-block{margin-bottom:2rem;}
 .cv-block .section-title{margin-bottom:0.7rem;}
 .cv-row{display:flex;justify-content:space-between;align-items:baseline;gap:1.5rem;padding:0.22rem 0;font-size:0.95rem;line-height:1.6;}
 .cv-item{font-weight:500;color:var(--navy);}
 .cv-org{color:#374151;}
 .cv-org::before{content:", ";}
-.cv-note{display:block;color:#374151;}
 .cv-year{color:var(--muted);white-space:nowrap;}
 
 /* TABLET AND PHONE */
@@ -245,10 +245,10 @@ body.page-mode > .page.active{flex:1 0 auto;} /* the open page stretches so the 
   .hero-content{justify-self:center;max-width:575px;}
   .paper-card{padding:1.25rem 1.25rem;}
   .cv-row{flex-direction:column;gap:0;padding:0.3rem 0;}
-  .interests{margin-top:2.4rem;padding:1.25rem 1.1rem 1.4rem;}
-  .interests-title{font-size:1.35rem;}
-  .interest-list{gap:0.55rem;}
-  .interest-list li{padding:0.55rem 1rem;}
+  .interests{margin-top:2rem;padding:0.85rem 0.9rem;}
+  .interests-title{width:100%;text-align:center;margin-right:0;}
+  .interest-list{gap:0.45rem;}
+  .interest-list li{font-size:0.9rem;padding:0.2rem 0.65rem;}
   .footer-inner{padding:0.9rem 1.25rem;}
 }
 
@@ -304,7 +304,7 @@ body.page-mode > .page.active{flex:1 0 auto;} /* the open page stretches so the 
     </div>
   </div>
   <div class="interests">
-    <h2 class="interests-title">Research Interests</h2>
+    <span class="interests-title">Research Interests</span>
     <ul class="interest-list">
       <li>Health Economics</li>
       <li>Development Economics</li>
@@ -387,6 +387,7 @@ body.page-mode > .page.active{flex:1 0 auto;} /* the open page stretches so the 
     <div class="page-heading">
       <h1 class="page-title">Curriculum Vitae</h1>
     </div>
+    <div class="cv-column">
     <p class="cv-intro">My full CV can be found <a href="CV_Ange_Ahouansou.pdf" target="_blank" rel="noopener">here</a>.</p>
     <a href="CV_Ange_Ahouansou.pdf" class="cv-dl" target="_blank" rel="noopener">↓ View Full CV (PDF)</a>
 
@@ -402,7 +403,7 @@ body.page-mode > .page.active{flex:1 0 auto;} /* the open page stretches so the 
       <div class="cv-block">
         <h2 class="section-title">Research and Professional Experience</h2>
         <div class="cv-row"><div class="cv-info"><span class="cv-item">Summer Health Research Program (SHERP) &ndash; Climate and Health Team</span><span class="cv-org">Humana Integrated Health System Sciences Institute, University of Houston</span></div><div class="cv-year">June 2026</div></div>
-        <div class="cv-row"><div class="cv-info"><span class="cv-item">Mapping Administrative Data Ecosystems in Sierra Leone</span><span class="cv-org">International Growth Centre (IGC)</span><span class="cv-note">With Vastav Ratra, London School of Economics, and Rochelle Sun, Harvard University</span></div><div class="cv-year">Nov 2025 &ndash; Oct 2026</div></div>
+        <div class="cv-row"><div class="cv-info"><span class="cv-item">Mapping Administrative Data Ecosystems in Sierra Leone</span><span class="cv-org">International Growth Centre (IGC)</span></div><div class="cv-year">Nov 2025 &ndash; Oct 2026</div></div>
         <div class="cv-row"><div class="cv-info"><span class="cv-item">Consultant &ndash; Ph.D. Summer Placement Program</span><span class="cv-org">International Growth Centre (IGC), Sierra Leone</span></div><div class="cv-year">July &ndash; Aug 2025</div></div>
         <div class="cv-row"><div class="cv-info"><span class="cv-item">Research Assistant</span><span class="cv-org">University of Houston</span></div><div class="cv-year">Fall 2024</div></div>
       </div>
@@ -422,6 +423,7 @@ body.page-mode > .page.active{flex:1 0 auto;} /* the open page stretches so the 
         <div class="cv-row"><div class="cv-info"><span class="cv-item">American Society of Health Economists (ASHEcon)</span></div></div>
         <div class="cv-row"><div class="cv-info"><span class="cv-item">Southern Economic Association (SEA)</span></div></div>
       </div>
+    </div>
     </div>
   </div>
 </div>
