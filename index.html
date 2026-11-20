@@ -122,7 +122,6 @@ nav{
   text-align:left;
 }
 .paper-title.paper-toggle:hover{color:var(--red);}
-.paper-presented{font-size:0.9rem;color:var(--muted);line-height:1.6;margin-top:0.35rem;}
 .paper-title.paper-toggle::after{
   content:"+";
   position:absolute;
@@ -189,22 +188,19 @@ body.page-mode > .page{width:100%;}
 body.page-mode > .page.active{flex:1 0 auto;} /* the open page stretches so the footer stays at the bottom */
 
 /* FOOTER */
-.site-footer{background:var(--navy);color:rgba(255,255,255,0.86);font-size:0.9rem;}
-.footer-inner{max-width:1100px;margin:0 auto;padding:1.35rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem 2rem;flex-wrap:wrap;}
-.footer-contact{display:flex;align-items:center;gap:0.85rem;}
-.site-footer a{color:#ffffff;text-decoration:none;}
-.site-footer a:hover{text-decoration:underline;}
-.site-footer .social-link{vertical-align:middle;opacity:0.95;}
+.site-footer{background:var(--navy);color:rgba(255,255,255,0.78);font-size:0.82rem;font-weight:400;letter-spacing:0.02em;}
+.footer-inner{max-width:1100px;margin:0 auto;padding:0.95rem 2rem;text-align:center;}
 
 /* CV SUMMARY */
-.cv-summary{margin-top:3.2rem;max-width:780px;}
-.cv-block{margin-bottom:2.6rem;}
-.cv-block .section-title{margin-bottom:0.9rem;}
-.cv-row{display:flex;justify-content:space-between;align-items:baseline;gap:1.5rem;padding:0.6rem 0;border-bottom:1px solid var(--border);}
-.cv-row:last-child{border-bottom:none;}
-.cv-item{display:block;font-size:1rem;font-weight:500;color:var(--navy);}
-.cv-org{display:block;font-size:1rem;color:#374151;}
-.cv-year{font-size:0.9rem;color:var(--muted);white-space:nowrap;}
+.cv-summary{margin-top:2.6rem;max-width:860px;}
+.cv-block{margin-bottom:2rem;}
+.cv-block .section-title{margin-bottom:0.7rem;}
+.cv-row{display:flex;justify-content:space-between;align-items:baseline;gap:1.5rem;padding:0.22rem 0;font-size:1rem;line-height:1.6;}
+.cv-item{font-weight:500;color:var(--navy);}
+.cv-org{color:#374151;}
+.cv-org::before{content:", ";}
+.cv-note{display:block;color:#374151;}
+.cv-year{color:var(--muted);white-space:nowrap;}
 
 /* TABLET AND PHONE */
 @media(max-width:768px){
@@ -242,8 +238,8 @@ body.page-mode > .page.active{flex:1 0 auto;} /* the open page stretches so the 
   /* keep the bio left-aligned, as on desktop; long centered paragraphs are hard to read */
   .hero-content{justify-self:center;max-width:575px;}
   .paper-card{padding:1.25rem 1.25rem;}
-  .cv-row{flex-direction:column;gap:0.1rem;}
-  .footer-inner{flex-direction:column;justify-content:center;text-align:center;padding:1.25rem 1.25rem;gap:0.6rem;}
+  .cv-row{flex-direction:column;gap:0;padding:0.3rem 0;}
+  .footer-inner{padding:0.9rem 1.25rem;}
 }
 
 @media(max-width:430px){
@@ -312,16 +308,16 @@ body.page-mode > .page.active{flex:1 0 auto;} /* the open page stretches so the 
         The Impact of a Natural Disaster on the Incidence of Fetal Losses and Pregnancy Outcomes
       </button>
       <p class="paper-authors">with Elaine M. Liu, Jin-Tan Liu and Tzu-yin Hazel Tseng</p>
-      <p class="paper-presented">Presented at ASHEcon, June 2026; accepted for presentation at the SEA 96th Annual Meeting, November 2026</p>
       <p class="paper-abstract">We examine the impact of the 1999 Taiwan earthquake (magnitude 7.3) on fetal losses and birth outcomes using birth registry and health insurance claims data. Exploiting variation in earthquake intensity across townships in a difference-in-differences framework, we find that in utero exposure during the first trimester increases fetal losses by 4.4 percent, with losses concentrated almost entirely among male fetuses. Exposure in later trimesters is associated with worse birth outcomes among surviving infants. Because selective fetal culling introduces survivor bias, we apply Lee (2009) bounds to recover the treatment effect among males: corrected estimates indicate the earthquake reduced male birth weight by 60 grams, which is substantially larger than uncorrected estimates suggest and larger than the effect on females. These findings demonstrate that ignoring positive selection leads researchers to understate the costs of adverse in utero environments and can produce misleading comparisons of fetal resilience across sexes.</p>
+      <p class="paper-abstract">(Presented at ASHEcon, June 2026; Accepted for presentation at the SEA 96th Annual Meeting, November 2026)</p>
     </div>
 
     <div class="paper-card">
       <button class="paper-title paper-toggle" type="button" aria-expanded="false">
         Leaded Petrol Phase-Out and Early-Life Mortality: Evidence from Benin
       </button>
-      <p class="paper-presented">Presented at the Texas Applied Microeconomics Student (TEAMS) Workshop, April 2026</p>
       <p class="paper-abstract">This paper estimates the impact of Benin’s 2005 phase-out of leaded petrol on early-life mortality. I combine multiple rounds of the Demographic and Health Surveys (DHS) with geocoded DHS cluster data and road-network data, using proximity to major roads as a proxy for lead exposure. Using a difference-in-differences design, I find that the phase-out reduced infant mortality by about 0.97 percentage points for births in clusters closer to a major road, relative to births in more distant clusters. These estimates are robust to alternative exposure measures based on road length within buffer zones. In addition, the results suggest that children are more vulnerable to lead exposure during the first two years of life, and that poorer households experienced larger post-phase-out improvements in infant mortality. Overall, the findings point to substantial mortality benefits from removing a major source of lead exposure and highlight the health gains from environmental regulation in a low-income setting.</p>
+      <p class="paper-abstract">(Presented at the Texas Applied Microeconomics Student (TEAMS) Workshop, April 2026)</p>
     </div>
   </div>
 </div>
@@ -388,7 +384,7 @@ body.page-mode > .page.active{flex:1 0 auto;} /* the open page stretches so the 
       <div class="cv-block">
         <h2 class="section-title">Research and Professional Experience</h2>
         <div class="cv-row"><div class="cv-info"><span class="cv-item">Summer Health Research Program (SHERP) &ndash; Climate and Health Team</span><span class="cv-org">Humana Integrated Health System Sciences Institute, University of Houston</span></div><div class="cv-year">June 2026</div></div>
-        <div class="cv-row"><div class="cv-info"><span class="cv-item">Mapping Administrative Data Ecosystems in Sierra Leone</span><span class="cv-org">International Growth Centre (IGC)</span><span class="cv-org">With Vastav Ratra, London School of Economics, and Rochelle Sun, Harvard University</span></div><div class="cv-year">Nov 2025 &ndash; Oct 2026</div></div>
+        <div class="cv-row"><div class="cv-info"><span class="cv-item">Mapping Administrative Data Ecosystems in Sierra Leone</span><span class="cv-org">International Growth Centre (IGC)</span><span class="cv-note">With Vastav Ratra, London School of Economics, and Rochelle Sun, Harvard University</span></div><div class="cv-year">Nov 2025 &ndash; Oct 2026</div></div>
         <div class="cv-row"><div class="cv-info"><span class="cv-item">Consultant &ndash; Ph.D. Summer Placement Program</span><span class="cv-org">International Growth Centre (IGC), Sierra Leone</span></div><div class="cv-year">July &ndash; Aug 2025</div></div>
         <div class="cv-row"><div class="cv-info"><span class="cv-item">Research Assistant</span><span class="cv-org">University of Houston</span></div><div class="cv-year">Fall 2024</div></div>
       </div>
@@ -415,12 +411,6 @@ body.page-mode > .page.active{flex:1 0 auto;} /* the open page stretches so the 
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-id">Ange Ahouansou &nbsp;&middot;&nbsp; Ph.D. Candidate in Economics &nbsp;&middot;&nbsp; University of Houston</div>
-    <div class="footer-contact">
-      <a href="mailto:amahouan@cougarnet.uh.edu">amahouan@cougarnet.uh.edu</a>
-      <a class="social-link" href="https://www.linkedin.com/in/ange-ahouansou-48182b238/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-        <img src="linkedin.png" class="social-icon" width="21" height="21" alt="LinkedIn">
-      </a>
-    </div>
   </div>
 </footer>
 
