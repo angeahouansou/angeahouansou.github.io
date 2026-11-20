@@ -79,11 +79,9 @@ nav{
 .social-link:hover{opacity:1;text-decoration:none;}
 .social-icon{display:block;width:21px;height:21px;object-fit:contain;}
 
-/* RESEARCH INTERESTS LINE (home) */
-.interests{width:100%;margin-top:2.6rem;padding:0.7rem 1.25rem;background:#f2f5f9;border-radius:3px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0.6rem 0.9rem;font-size:1rem;}
-.interests-title{font-size:1rem;font-weight:600;color:var(--navy);margin-right:0.35rem;}
-.interest-list{display:flex;flex-wrap:wrap;justify-content:center;gap:0.6rem;list-style:none;}
-.interest-list li{background:var(--white);border:1px solid #d9e0e8;border-radius:2px;padding:0.22rem 0.9rem;color:var(--text);}
+/* RESEARCH INTERESTS (home, under the bio) */
+.interest-list{display:flex;flex-wrap:wrap;gap:0.5rem;list-style:none;margin-top:1.3rem;}
+.interest-list li{background:var(--white);border:1px solid #d9e0e8;border-radius:2px;padding:0.2rem 0.65rem;font-size:0.82rem;color:var(--text);white-space:nowrap;}
 
 /* SECTIONS */
 .full-alt{background:var(--white);}
@@ -245,10 +243,6 @@ body.page-mode > .page.active{flex:1 0 auto;} /* the open page stretches so the 
   .hero-content{justify-self:center;max-width:575px;}
   .paper-card{padding:1.25rem 1.25rem;}
   .cv-row{flex-direction:column;gap:0;padding:0.3rem 0;}
-  .interests{margin-top:2rem;padding:0.85rem 0.9rem;}
-  .interests-title{width:100%;text-align:center;margin-right:0;}
-  .interest-list{gap:0.45rem;}
-  .interest-list li{font-size:0.9rem;padding:0.2rem 0.65rem;}
   .footer-inner{padding:0.9rem 1.25rem;}
 }
 
@@ -301,15 +295,12 @@ body.page-mode > .page.active{flex:1 0 auto;} /* the open page stretches so the 
           <img src="linkedin.png" class="social-icon" width="21" height="21" alt="LinkedIn">
         </a>
       </p>
+      <ul class="interest-list" aria-label="Research interests">
+        <li>Health Economics</li>
+        <li>Development Economics</li>
+        <li>Labor Economics</li>
+      </ul>
     </div>
-  </div>
-  <div class="interests">
-    <span class="interests-title">Research Interests</span>
-    <ul class="interest-list">
-      <li>Health Economics</li>
-      <li>Development Economics</li>
-      <li>Labor Economics</li>
-    </ul>
   </div>
 </div>
 
