@@ -70,10 +70,10 @@ nav{
 .accent-bar{position:absolute;bottom:-1px;left:0;width:100%;height:5px;background:var(--red);border-radius:0 0 3px 3px;}
 .hero-content{text-align:left;justify-self:start;width:100%;max-width:575px;}
 .hero-welcome{font-size:1.25rem;line-height:1.8;color:#1f2937;margin-bottom:0.9rem;}
-.hero-bio{font-size:1rem;line-height:1.8;color:#1f2937;margin-bottom:0.9rem;}
-.hero-contact{margin-top:1.25rem;font-size:1rem;line-height:1.8;color:#1f2937;}
-.hero-contact a{color:var(--red);text-decoration:none;}
-.hero-contact a:hover{text-decoration:underline;}
+.hero-bio{font-size:0.95rem;line-height:1.8;color:#1f2937;margin-bottom:0.9rem;}
+.hero-contact{margin-top:1.25rem;font-size:0.95rem;line-height:1.8;color:#1f2937;}
+.hero-contact a,.hero-bio a{color:var(--red);text-decoration:none;}
+.hero-contact a:hover,.hero-bio a:hover{text-decoration:underline;}
 .social-link{display:inline-flex;align-items:center;vertical-align:-0.3em;opacity:0.82;transition:opacity 0.2s;}
 .social-link:hover{opacity:1;text-decoration:none;}
 .social-icon{display:block;width:21px;height:21px;object-fit:contain;}
@@ -81,7 +81,7 @@ nav{
 /* SECTIONS */
 .full-alt{background:var(--white);}
 .section-wrap{max-width:1100px;margin:0 auto;padding:4.3rem 2rem;}
-.section-title{font-family:'EB Garamond',serif;font-size:1.9rem;font-weight:400;color:var(--navy);margin-bottom:1.5rem;padding-bottom:0.28rem;display:inline-block;border-bottom:2px solid var(--red);}
+.section-title{font-family:'EB Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin-bottom:1.5rem;padding-bottom:0.28rem;display:inline-block;border-bottom:2px solid var(--red);}
 .page-heading{text-align:center;margin:0 auto 2.4rem;padding-top:1.2rem;}
 .page-title{
   font-family:'EB Garamond',serif;
@@ -110,7 +110,7 @@ nav{
   width:100%;
   background:none;
   border:none;
-  padding:0 2rem 0 0;
+  padding:0;
   position:relative;
   font-family:'EB Garamond',serif;
   font-size:1.15rem;
@@ -121,17 +121,23 @@ nav{
   text-align:left;
 }
 .paper-title.paper-toggle:hover{color:var(--red);}
-.paper-title.paper-toggle::after{
-  content:"+";
-  position:absolute;
-  right:0;
-  top:0;
-  color:var(--red);
-  font-size:1.15rem;
+.paper-presented{font-size:0.9rem;color:var(--muted);line-height:1.6;margin-top:0.35rem;}
+.abstract-toggle{
+  display:inline-block;
+  background:none;
+  border:none;
+  padding:0.4rem 0;
+  margin-top:0.45rem;
+  font-family:'DM Sans',sans-serif;
+  font-size:0.9rem;
   font-weight:500;
+  color:var(--red);
+  cursor:pointer;
 }
-.paper-card.open .paper-title.paper-toggle::after{content:"−";}
-.paper-abstract{font-size:0.95rem;color:#374151;line-height:1.7;margin-top:0.6rem;font-style:normal;}
+.abstract-toggle::after{content:" +";font-size:1.15em;}
+.paper-card.open .abstract-toggle::after{content:" −";}
+.abstract-toggle:hover{text-decoration:underline;}
+.paper-abstract{font-size:0.95rem;color:#374151;line-height:1.7;margin-top:0.3rem;font-style:normal;}
 .paper-card .paper-abstract{display:none;}
 .paper-card.open .paper-abstract{display:block;}
 
@@ -139,7 +145,7 @@ nav{
 .teach-group{margin-bottom:2.8rem;}
 .teach-school{
   font-family:'EB Garamond',serif;
-  font-size:1.9rem;
+  font-size:1.5rem;
   font-weight:400;
   color:var(--navy);
   margin-bottom:1.15rem;
@@ -173,10 +179,10 @@ nav{
 .teaching-evals-text{margin-bottom:12px;line-height:1.6;}
 
 /* CV */
-.cv-intro{font-size:1rem;color:#1f2937;margin-bottom:1rem;line-height:1.8;}
+.cv-intro{font-size:0.95rem;color:#1f2937;margin-bottom:1rem;line-height:1.8;}
 .cv-intro a{color:var(--red);text-decoration:none;font-weight:500;}
 .cv-intro a:hover{text-decoration:underline;}
-.cv-dl{display:inline-flex;align-items:center;gap:0.5rem;border:1px solid var(--red);color:var(--red);padding:0.6rem 1.4rem;text-decoration:none;font-size:0.83rem;border-radius:2px;transition:all 0.2s;margin-top:0.5rem;}
+.cv-dl{display:inline-flex;align-items:center;gap:0.5rem;border:1px solid var(--red);color:var(--red);padding:0.6rem 1.4rem;text-decoration:none;font-size:0.95rem;border-radius:2px;transition:all 0.2s;margin-top:0.5rem;}
 .cv-dl:hover{background:var(--red);color:white;}
 
 /* PAGE-LIKE NAVIGATION */
@@ -212,7 +218,7 @@ body.page-mode .hero.page.active{display:flex !important;}
   .hero{padding:5.4rem 1.25rem 3rem;min-height:100svh;} /* svh = visible height on iPhone Safari */
   .hero-welcome,.hero-bio,.hero-contact{line-height:1.65;}
   .contact-label{display:block;}
-  .section-title,.teach-school{font-size:1.5rem;} /* same size as each other, smaller on phones so long names fit */
+  .section-title,.teach-school{font-size:1.35rem;} /* same size as each other, a touch smaller on phones */
   /* short pages (CV) keep their white background down to the bottom of the screen */
   body.page-mode .full-alt.page.active{min-height:100vh;min-height:100svh;}
   .research-wrap,.cv-wrap,.teaching-wrap{padding-top:5.4rem;}
@@ -232,7 +238,7 @@ body.page-mode .hero.page.active{display:flex !important;}
 
 @media(max-width:350px){
   .nav-links a{font-size:0.72rem;letter-spacing:0.02em;}
-  .section-title,.teach-school{font-size:1.3rem;}
+  .section-title,.teach-school{font-size:1.25rem;}
 }
 </style>
 </head>
@@ -262,8 +268,8 @@ body.page-mode .hero.page.active{display:flex !important;}
     </div>
     <div class="hero-content">
       <p class="hero-welcome"><strong>Welcome to my website!</strong></p>
-      <p class="hero-bio">I am a fourth-year Ph.D. student in Economics at the University of Houston, with research interests at the intersection of health economics, development economics, and labor economics. My research examines how public policies and early-life environmental conditions shape health, mortality, and human capital formation over the life course.</p>
-      <p class="hero-bio">In Summer 2025, I served as a Consultant with the International Growth Centre (IGC) through its Ph.D. Summer Placement Program, working with the Sierra Leone country team.</p>
+      <p class="hero-bio">I am a fourth-year Ph.D. student in <a href="https://www.uh.edu/class/economics/" target="_blank" rel="noopener noreferrer">Economics at the University of Houston</a>, with research interests at the intersection of health economics, development economics, and labor economics. My research examines how public policies and early-life environmental conditions shape health, mortality, and human capital formation over the life course.</p>
+      <p class="hero-bio">In Summer 2025, I served as a Consultant with the <a href="https://www.theigc.org/" target="_blank" rel="noopener noreferrer">International Growth Centre (IGC)</a> through its Ph.D. Summer Placement Program, working with the <a href="https://www.theigc.org/countries/sierra-leone" target="_blank" rel="noopener noreferrer">Sierra Leone country team</a>.</p>
       <p class="hero-bio">Before joining the doctoral program, I was a predoctoral fellow at the African School of Economics. I also hold an M.A. in Economics from the University of Houston.</p>
       <p class="hero-bio">I expect to be on the job market in Fall 2027.</p>
       <p class="hero-contact">
@@ -290,16 +296,18 @@ body.page-mode .hero.page.active{display:flex !important;}
         The Impact of a Natural Disaster on the Incidence of Fetal Losses and Pregnancy Outcomes
       </button>
       <p class="paper-authors">with Elaine M. Liu, Jin-Tan Liu and Tzu-yin Hazel Tseng</p>
+      <p class="paper-presented">Presented at ASHEcon, June 2026; accepted for presentation at the SEA 96th Annual Meeting, November 2026</p>
+      <button class="abstract-toggle paper-toggle" type="button" aria-expanded="false">Abstract</button>
       <p class="paper-abstract">We examine the impact of the 1999 Taiwan earthquake (magnitude 7.3) on fetal losses and birth outcomes using birth registry and health insurance claims data. Exploiting variation in earthquake intensity across townships in a difference-in-differences framework, we find that in utero exposure during the first trimester increases fetal losses by 4.4 percent, with losses concentrated almost entirely among male fetuses. Exposure in later trimesters is associated with worse birth outcomes among surviving infants. Because selective fetal culling introduces survivor bias, we apply Lee (2009) bounds to recover the treatment effect among males: corrected estimates indicate the earthquake reduced male birth weight by 60 grams, which is substantially larger than uncorrected estimates suggest and larger than the effect on females. These findings demonstrate that ignoring positive selection leads researchers to understate the costs of adverse in utero environments and can produce misleading comparisons of fetal resilience across sexes.</p>
-      <p class="paper-abstract">(Presented at ASHEcon, June 2026; Accepted for presentation at the SEA 96th Annual Meeting, November 2026)</p>
     </div>
 
     <div class="paper-card">
       <button class="paper-title paper-toggle" type="button" aria-expanded="false">
         Leaded Petrol Phase-Out and Early-Life Mortality: Evidence from Benin
       </button>
+      <p class="paper-presented">Presented at the Texas Applied Microeconomics Student (TEAMS) Workshop, April 2026</p>
+      <button class="abstract-toggle paper-toggle" type="button" aria-expanded="false">Abstract</button>
       <p class="paper-abstract">This paper estimates the impact of Benin’s 2005 phase-out of leaded petrol on early-life mortality. I combine multiple rounds of the Demographic and Health Surveys (DHS) with geocoded DHS cluster data and road-network data, using proximity to major roads as a proxy for lead exposure. Using a difference-in-differences design, I find that the phase-out reduced infant mortality by about 0.97 percentage points for births in clusters closer to a major road, relative to births in more distant clusters. These estimates are robust to alternative exposure measures based on road length within buffer zones. In addition, the results suggest that children are more vulnerable to lead exposure during the first two years of life, and that poorer households experienced larger post-phase-out improvements in infant mortality. Overall, the findings point to substantial mortality benefits from removing a major source of lead exposure and highlight the health gains from environmental regulation in a low-income setting.</p>
-      <p class="paper-abstract">(Presented at the Texas Applied Microeconomics Student (TEAMS) Workshop, April 2026)</p>
     </div>
   </div>
 </div>
@@ -362,7 +370,9 @@ document.querySelectorAll('.paper-toggle').forEach(function(button){
   button.addEventListener('click', function(){
     const card = button.closest('.paper-card');
     const isOpen = card.classList.toggle('open');
-    button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    card.querySelectorAll('.paper-toggle').forEach(function(b){
+      b.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
   });
 });
 
